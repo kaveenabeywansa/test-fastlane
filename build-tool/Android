@@ -1,0 +1,3 @@
+def androidAppSign(bundleId)
+    puts "Android app (#{bundleId}) signing..."
+end

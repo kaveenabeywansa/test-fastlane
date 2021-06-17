@@ -1,0 +1,46 @@
+
+import("test-fastlane.git/build-tool/MainImport")
+
+before_all do 
+  ensure_env_vars(
+      env_vars: ['ENVIRONMENT', 'BUNDLE_ID']
+    )
+end
+
+default_platform(:ios)
+
+
+platform :ios do
+    
+    before_all do |lane, options|
+      puts "before_all ios lane executing..."
+    end
+   
+    lane :test do |options|
+      puts "Fastlane test ios..."
+    end
+    
+    desc "Switch to the release mode "
+    lane :release do |options|
+        puts "iOS release lane executing..."
+    end
+
+end
+
+platform :android do
+    before_all do |lane, options|
+        puts "before_all android lane executing..."
+    end
+
+    lane :test do |options|
+        puts "Fastlane test android..."
+    end
+    
+    lane :release do |options|
+        puts "Android release lane executing..."
+    end
+end
+
+error do |lane, exception|
+    UI.error(exception)
+end
