@@ -1,12 +1,6 @@
 
 import("test-fastlane.git/build-tool/MainImport")
 
-before_all do 
-  ensure_env_vars(
-      env_vars: ['ENVIRONMENT', 'BUNDLE_ID']
-    )
-end
-
 default_platform(:ios)
 
 
@@ -38,6 +32,7 @@ platform :android do
     
     lane :release do |options|
         puts "Android release lane executing..."
+        androidAppSign
     end
 end
 
