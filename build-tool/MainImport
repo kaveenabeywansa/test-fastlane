@@ -1,1 +1,0 @@
-import("test-fastlane.git/build-tool/Android")
