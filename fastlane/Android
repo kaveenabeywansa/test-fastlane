@@ -3,5 +3,5 @@ def androidAppSign(bundleId="io.ionic.starter")
     puts "PWD"
     sh "pwd"
     puts "Proj Workspace"
-    puts "#{PROJ_WORKSPACE}"
+    puts "#{ENV['PROJ_WORKSPACE']}"
 end
