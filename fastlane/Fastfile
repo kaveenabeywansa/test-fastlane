@@ -17,6 +17,7 @@ platform :ios do
     desc "Switch to the release mode "
     lane :release do |options|
         puts "iOS release lane executing..."
+        puts "v{CFBundleShortVersionString}/"
     end
 
 end
