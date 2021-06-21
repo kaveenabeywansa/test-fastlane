@@ -1,4 +1,7 @@
 def androidAppSign(bundleId="io.ionic.starter")
     puts "Android app (#{bundleId}) signing..."
+    puts "PWD"
     sh "pwd"
+    puts "Proj Workspace"
+    puts "#{PROJ_WORKSPACE}"
 end
